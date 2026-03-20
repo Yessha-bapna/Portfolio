@@ -1,45 +1,38 @@
-# Yessha Bapna — Personal Portfolio
+# Personal Portfolio — Next.js
 
-> AI/ML Engineer · Full-Stack AI Applications · Data Science
-
-A modern, dark-themed personal portfolio built with **Next.js 16**, showcasing projects, internships, skills, and contact information.
-
-🔗 **Live:** [yessha-portfolio.vercel.app](https://yessha-portfolio.vercel.app)
-📧 **Contact:** bapnayessha05@gmail.com
-🐙 **GitHub:** [github.com/Yessha-bapna](https://github.com/Yessha-bapna)
-💼 **LinkedIn:** [linkedin.com/in/yessha-bapna](https://www.linkedin.com/in/yessha-bapna)
+A modern, dark-themed personal portfolio website built with **Next.js 16**, featuring glassmorphism design, smooth animations, and a fully responsive layout.
 
 ---
 
 ## ✨ Features
 
-- **Hero Section** — Animated particle canvas, typewriter role, two-column layout with a 3D flip card showing Achievements & Certifications
-- **About Me** — Code snippet card, skill highlights, Resume & Cover Letter PDF links
-- **Experience** — Two-column layout: internship timeline (left) + skills & technologies (right)
-- **Projects** — Filterable project cards with real GitHub links
-- **Contact / Footer** — Email CTA, location, socials (LinkedIn + GitHub), merged footer
+- **Hero Section** — Animated particle canvas, typewriter role line, two-column layout with a 3D flip card (Achievements / Certifications)
+- **About Me** — Code snippet card, skill highlights, Resume & Cover Letter PDF viewer links
+- **Experience** — Two-column layout: internship timeline (left) + grouped skills & technologies (right)
+- **Projects** — Filterable project cards with GitHub links and metric badges
+- **Contact / Footer** — Email CTA, location, social links — merged into a single footer section
 
 ---
 
 ## 🗂️ Project Structure
 
 ```
-yessha-portfolio/
+portfolio/
 ├── app/
 │   ├── components/
 │   │   ├── Navbar.tsx       # Fixed navbar with logo + active section tracking
-│   │   ├── Hero.tsx         # Landing section with flip card
-│   │   ├── About.tsx        # About me + resume downloads
-│   │   ├── Experience.tsx   # Internships + skills grid
+│   │   ├── Hero.tsx         # Landing section with 3D flip card
+│   │   ├── About.tsx        # About + resume/cover letter links
+│   │   ├── Experience.tsx   # Internships timeline + skills grid
 │   │   ├── Projects.tsx     # Filterable project cards
-│   │   └── Contact.tsx      # Contact + footer (merged)
+│   │   └── Contact.tsx      # Contact section + footer (merged)
 │   ├── globals.css          # Design system, animations, utility classes
 │   ├── layout.tsx           # Root layout + SEO metadata
 │   └── page.tsx             # Page assembly
 └── public/
     ├── logo.png
-    ├── Yessha_Resume.pdf
-    └── Yessha_CoverLetter_General.pdf
+    ├── Resume.pdf
+    └── CoverLetter.pdf
 ```
 
 ---
@@ -61,8 +54,8 @@ yessha-portfolio/
 
 ```bash
 # Clone the repo
-git clone https://github.com/Yessha-bapna/yessha-portfolio.git
-cd yessha-portfolio
+git clone <your-repo-url>
+cd portfolio
 
 # Install dependencies
 npm install
@@ -81,19 +74,25 @@ Place the following files in the `/public` folder for resume/cover letter links 
 
 | File | Purpose |
 |---|---|
-| `Yessha_Resume.pdf` | Resume (opens in new tab from About & Hero) |
-| `Yessha_CoverLetter_General.pdf` | Cover letter (opens in new tab from About) |
+| `Resume.pdf` | Resume — opens in new tab |
+| `CoverLetter.pdf` | Cover letter — opens in new tab |
 
 ---
 
 ## 📦 Deployment
 
-The easiest way to deploy is via **Vercel**:
+Deploy instantly with **Vercel**:
 
 1. Push your code to GitHub
 2. Import the repo at [vercel.com/new](https://vercel.com/new)
-3. Vercel auto-detects Next.js and deploys instantly
+3. Vercel auto-detects Next.js and deploys
 
 ---
 
-© 2026 Yessha Bapna. Built with ♥ using Next.js.
+## 🎨 Design Highlights
+
+- Dark mode with aurora background and particle canvas
+- Glassmorphism cards with subtle border glow
+- Smooth fade-in and slide-up entrance animations
+- 3D CSS flip card for interactive content display
+- Fully responsive — stacks gracefully on mobile
