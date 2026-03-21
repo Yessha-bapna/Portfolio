@@ -142,11 +142,12 @@ body::before {
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.01em;
-  background: linear-gradient(135deg, #9cd5ff, #4fa8e8);
-  color: #050810;
+  background: linear-gradient(135deg, #9cd5ff 0%, #4fa8e8 100%) !important;
+  color: #050810 !important;
+  -webkit-text-fill-color: #050810 !important;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
   text-decoration: none;
@@ -162,11 +163,12 @@ body::before {
 }
 
 .btn-primary:hover::before { opacity: 1; }
-.btn-primary span { position: relative; z-index: 1; }
+.btn-primary span { position: relative; z-index: 1; color: #050810; -webkit-text-fill-color: #050810; }
+.btn-primary svg { position: relative; z-index: 1; color: #050810; }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(156, 213, 255, 0.35);
+  box-shadow: 0 8px 32px rgba(156, 213, 255, 0.4);
 }
 
 .btn-primary:active { transform: translateY(0); }
@@ -179,9 +181,10 @@ body::before {
   border-radius: 12px;
   font-size: 15px;
   font-weight: 600;
-  background: transparent;
+  background: rgba(156, 213, 255, 0.06);
   color: var(--accent);
-  border: 1.5px solid var(--border-accent);
+  -webkit-text-fill-color: var(--accent);
+  border: 1.5px solid rgba(156, 213, 255, 0.35);
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -193,13 +196,14 @@ body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--accent-glow-sm);
+  background: rgba(156, 213, 255, 0.1);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .btn-outline:hover::before { opacity: 1; }
-.btn-outline span { position: relative; z-index: 1; }
+.btn-outline span { position: relative; z-index: 1; color: var(--accent); -webkit-text-fill-color: var(--accent); }
+.btn-outline svg { position: relative; z-index: 1; }
 
 .btn-outline:hover {
   border-color: var(--accent);
@@ -510,7 +514,7 @@ body::before {
 
   .btn-primary,
   .btn-outline {
-    padding: 12px 20px;
+    padding: 12px 22px;
     font-size: 14px;
   }
 
@@ -535,10 +539,8 @@ body::before {
 
   .btn-primary,
   .btn-outline {
-    padding: 11px 16px;
-    font-size: 13px;
-    width: 100%;
-    justify-content: center;
+    padding: 12px 18px;
+    font-size: 14px;
   }
 }
 
