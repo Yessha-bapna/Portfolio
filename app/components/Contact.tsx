@@ -122,7 +122,7 @@ export default function Contact() {
           </div>
 
           {/* ── RIGHT: Email CTA ── */}
-          <div className="glass-card" style={{
+          <div className="glass-card email-cta-card" style={{
             padding: "52px 44px",
             textAlign: "center",
             display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
@@ -146,7 +146,7 @@ export default function Contact() {
               Hit the button and I'll get back to you within 24 hours.
             </p>
             <a href="mailto:bapnayessha05@gmail.com" className="btn-primary"
-              style={{ display: "inline-flex", padding: "14px 28px", borderRadius: "12px", fontSize: "14px", textDecoration: "none", gap: "8px" }}>
+              style={{ padding: "14px 20px", borderRadius: "12px", fontSize: "14px", textDecoration: "none", gap: "8px", wordBreak: "break-all", textAlign: "center", justifyContent: "center" }}>
               <span>bapnayessha05@gmail.com</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z" />
@@ -159,7 +159,7 @@ export default function Contact() {
 
       {/* ── FOOTER BAR ── */}
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="container-wide z-content" style={{ padding: "28px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
+        <div className="container-wide z-content footer-bar-inner" style={{ padding: "28px 24px" }}>
           {/* Logo */}
           <Image
               src="/logo.png"
@@ -204,6 +204,26 @@ export default function Contact() {
         .social-card:hover { transform: translateY(-3px); }
         @media (max-width: 800px) {
           .contact-layout { grid-template-columns: 1fr !important; }
+          .email-cta-card { padding: 36px 24px !important; }
+        }
+        @media (max-width: 480px) {
+          .email-cta-card { padding: 28px 16px !important; }
+          .contact-layout { gap: 20px; }
+        }
+        .footer-bar-inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+        @media (max-width: 600px) {
+          .footer-bar-inner {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+          }
         }
       `}</style>
     </footer>

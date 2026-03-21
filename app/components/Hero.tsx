@@ -152,7 +152,7 @@ export default function Hero() {
           width: "100%",
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "120px 32px 80px",
+          padding: "120px 24px 80px",
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "60px",
@@ -182,9 +182,9 @@ export default function Hero() {
           {/* Heading */}
           <h1 style={{
             fontFamily: "'Space Grotesk', sans-serif",
-            fontSize: "clamp(32px, 4vw, 64px)",
-            fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.03em",
-            marginBottom: "14px", whiteSpace: "nowrap",
+            fontSize: "clamp(28px, 5vw, 64px)",
+            fontWeight: 800, lineHeight: 1.1, letterSpacing: "-0.03em",
+            marginBottom: "14px",
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(24px)",
             transition: "opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s",
@@ -364,7 +364,8 @@ export default function Hero() {
           position: relative !important;
         }
 
-        .flip-container:hover .flip-inner {
+        .flip-container:hover .flip-inner,
+        .flip-container:focus-within .flip-inner {
           transform: rotateY(180deg);
         }
 
@@ -422,12 +423,21 @@ export default function Hero() {
           .hero-grid {
             grid-template-columns: 1fr !important;
             text-align: center;
+            padding: 100px 16px 60px !important;
+            gap: 40px !important;
           }
           .hero-grid > div:first-child {
             align-items: center !important;
           }
-          .flip-container {
-            height: 400px;
+        }
+
+        @media (max-width: 480px) {
+          .hero-grid {
+            padding: 88px 14px 48px !important;
+            gap: 32px !important;
+          }
+          .flip-face {
+            padding: 24px 20px !important;
           }
         }
       `}</style>

@@ -13,10 +13,10 @@ export default function About() {
   return (
     <section
       id="about"
+      className="section-py"
       style={{
         position: "relative",
         minHeight: "100vh",
-        height: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -247,6 +247,14 @@ export default function About() {
           .about-grid {
             grid-template-columns: 1fr !important;
             gap: 40px !important;
+          }
+        }
+        @media (max-width: 768px) {
+          #about {
+            min-height: unset;
+          }
+          .about-grid {
+            gap: 32px !important;
           }
         }
       `}</style>

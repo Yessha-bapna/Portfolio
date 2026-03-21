@@ -272,6 +272,25 @@ export default function Experience() {
             gap: 48px;
           }
         }
+
+        @media (max-width: 768px) {
+          .exp-skills-grid {
+            gap: 36px;
+          }
+          .col-heading {
+            font-size: 16px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .exp-skills-grid {
+            gap: 28px;
+          }
+          .skill-pill {
+            font-size: 11px;
+            padding: 5px 10px;
+          }
+        }
       `}</style>
     </section>
   );

@@ -117,7 +117,7 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <a href="#contact" className="btn-primary" style={{ padding: "10px 20px", fontSize: "14px", borderRadius: "10px" }}>
+            <a href="#contact" className="btn-primary navbar-hire-btn" style={{ padding: "10px 20px", fontSize: "14px", borderRadius: "10px" }}>
               <span>Hire Me</span>
             </a>
             {/* Mobile Menu Toggle */}
@@ -143,9 +143,11 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div
+            className="mobile-menu-dropdown"
             style={{
               borderTop: "1px solid var(--border-subtle)",
               paddingBottom: "16px",
+              paddingTop: "8px",
             }}
           >
             {navLinks.map((link) => (
@@ -168,6 +170,16 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <div style={{ padding: "12px 16px 4px" }}>
+              <a
+                href="#contact"
+                onClick={() => setMenuOpen(false)}
+                className="btn-primary"
+                style={{ display: "flex", justifyContent: "center", borderRadius: "10px", padding: "12px 20px", fontSize: "14px" }}
+              >
+                <span>Hire Me</span>
+              </a>
+            </div>
           </div>
         )}
       </div>
@@ -176,6 +188,14 @@ export default function Navbar() {
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: flex !important; }
+          .navbar-hire-btn { display: none !important; }
+        }
+        .mobile-menu-dropdown {
+          animation: slideDown 0.18s ease;
+        }
+        @keyframes slideDown {
+          from { opacity: 0; transform: translateY(-6px); }
+          to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </nav>
